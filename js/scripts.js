@@ -24,20 +24,22 @@ $(function() {
     // Create and instance
         var pizza = Object.create(MakePizza);
     // When buttons are clicked, change object properties and html
+
         $('#large_size').click(function(event) {
-            pizza.size = $('#large_size').val();
+            // use the substring to strip the extra cost off the input value to keep property clean
+            pizza.size = $('#large_size').val().substring(3);
             $('.size_attribute').text(pizza.size);
             $('#pizza_pic').attr('height', '200', 'width', '200');
             $('.cost_attribute').text(pizza.calculateCost());
         });
         $('#medium_size').click(function(event) {
-            pizza.size = $('#medium_size').val();
+            pizza.size = $('#medium_size').val().substring(3);
             $('.size_attribute').text(pizza.size);
             $('#pizza_pic').attr('height', '180', 'width', '180');
             $('.cost_attribute').text(pizza.calculateCost());
         });
         $('#small_size').click(function(event) {
-            pizza.size = $('#small_size').val();
+            pizza.size = $('#small_size').val().substring(3);
             $('.size_attribute').text(pizza.size);
             $('#pizza_pic').attr('height', '160', 'width', '160');
             $('.cost_attribute').text(pizza.calculateCost());
@@ -49,13 +51,13 @@ $(function() {
             $('.cost_attribute').text(pizza.calculateCost());
         });
         $('#cheese_topping').click(function(event) {
-            pizza.topping = $('#cheese_topping').val();
+            pizza.topping = $('#cheese_topping').val().substring(4);
             $('.topping_attribute').text(pizza.topping);
             $('#pizza_pic').attr('src', 'images/cheese.png');
             $('.cost_attribute').text(pizza.calculateCost());
         });
         $('#pepperoni_topping').click(function(event) {
-            pizza.topping = $('#pepperoni_topping').val();
+            pizza.topping = $('#pepperoni_topping').val().substring(4);
             $('.topping_attribute').text(pizza.topping);
             $('#pizza_pic').attr('src', 'images/pepperoni.png');
             $('.cost_attribute').text(pizza.calculateCost());
