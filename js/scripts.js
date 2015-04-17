@@ -1,3 +1,4 @@
+// PROTOTYPE to create pizza with size and topping properties and a method to calculate cost
 var MakePizza = {
     size: "Large",
     topping: "Plain",
@@ -20,10 +21,49 @@ var MakePizza = {
 };
 
 $(function() {
-
-    var pizza = Object.create(MakePizza);
-
-    // $('form#newPizza').submit(function(event) {
-    //     var size
-    // });
+    // Create and instance
+        var pizza = Object.create(MakePizza);
+    // When buttons are clicked, change object properties and html
+        $('#large_size').click(function(event) {
+            pizza.size = $('#large_size').val();
+            $('.size_attribute').text(pizza.size);
+            $('#pizza_pic').attr('height', '200', 'width', '200');
+            $('.cost_attribute').text(pizza.calculateCost());
+        });
+        $('#medium_size').click(function(event) {
+            pizza.size = $('#medium_size').val();
+            $('.size_attribute').text(pizza.size);
+            $('#pizza_pic').attr('height', '180', 'width', '180');
+            $('.cost_attribute').text(pizza.calculateCost());
+        });
+        $('#small_size').click(function(event) {
+            pizza.size = $('#small_size').val();
+            $('.size_attribute').text(pizza.size);
+            $('#pizza_pic').attr('height', '160', 'width', '160');
+            $('.cost_attribute').text(pizza.calculateCost());
+        });
+        $('#plain_topping').click(function(event) {
+            pizza.topping = $('#plain_topping').val();
+            $('.topping_attribute').text(pizza.topping);
+            $('#pizza_pic').attr('src', 'images/plain.png');
+            $('.cost_attribute').text(pizza.calculateCost());
+        });
+        $('#cheese_topping').click(function(event) {
+            pizza.topping = $('#cheese_topping').val();
+            $('.topping_attribute').text(pizza.topping);
+            $('#pizza_pic').attr('src', 'images/cheese.png');
+            $('.cost_attribute').text(pizza.calculateCost());
+        });
+        $('#pepperoni_topping').click(function(event) {
+            pizza.topping = $('#pepperoni_topping').val();
+            $('.topping_attribute').text(pizza.topping);
+            $('#pizza_pic').attr('src', 'images/pepperoni.png');
+            $('.cost_attribute').text(pizza.calculateCost());
+        });
+    // When button is clicked, order current version of the pizza object
+        $('#order_pizza').click(function(event) {
+            event.preventDefault();
+            $('#order_form').hide();
+            $('#order_complete').show();
+        });
 });

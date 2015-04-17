@@ -14,7 +14,8 @@
                     <h1>Billy Bob's Pizza</h1>
                 </div>
             </div>
-            <div class="row">
+
+            <div id="order_form" class="row">
                 <div class="col-xs-6">
                     <h2>Create a Pizza</h2>
                     <form id="newPizza">
@@ -29,7 +30,9 @@
                         <input type="button" class="btn btn-success" id="plain_topping" value="Plain">
                         <input type="button" class="btn btn-success" id="cheese_topping" value="Cheese">
                         <input type="button" class="btn btn-success" id="pepperoni_topping" value="Pepperoni">
-                      </div>
+                    </div>
+                    <h3>Ready to Checkout?</h3>
+                    <button id="order_pizza" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span>Order Pizza</button>
                     </form>
                 </div>
 
@@ -39,12 +42,17 @@
                         <img id="pizza_pic" src="images/plain.png">
                     </div>
                     <div id="pizza_attributes">
-                        <h3>Size: <span class="attribute"></span></h3>
-                        <h3>Topping: <span class="attribute"></span></h3>
-                        <h3>Cost: <span class="cost-attribute"></span></h3>
+                        <h3>Size: <span class="size_attribute">Large</span></h3>
+                        <h3>Topping: <span class="topping_attribute">Plain</span></h3>
+                        <h3>Cost:$ <span class="cost_attribute"></span></h3>
                     </div>
                 </div>
+            </div>
 
+            <div id="order_complete" class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2>Your Order is Being Processed</h2>
+                </div>
             </div>
         </div>
     </body>

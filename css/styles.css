@@ -1,14 +1,17 @@
 #pizza_pic_holder {
-    border: 1px solid black;
     margin-top: 3em;
     height: 230px;
     width: 230px;
 }
 
-.attribute {
+.size_attribute, .topping_attribute {
     color: #33CCFF;
 }
 
-.color_attribute {
+.cost_attribute {
     color: #FF0000;
+}
+
+#order_complete {
+    display: none;
 }
