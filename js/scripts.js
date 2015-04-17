@@ -27,13 +27,17 @@ $(function() {
 
         $('#large_size').click(function(event) {
             // use the substring to strip the extra cost off the input value to keep property clean
-            pizza.size = $('#large_size').val().substring(3);
+            pizza.size = $('#large_size').val().substring(4);
             $('.size_attribute').text(pizza.size);
             $('#pizza_pic').attr('height', '200', 'width', '200');
+
+///// HEY DIANE, i can't figure out how to not have to repeat this line
+///// in all my events without just making another event. Any thoughts?
             $('.cost_attribute').text(pizza.calculateCost());
+/////
         });
         $('#medium_size').click(function(event) {
-            pizza.size = $('#medium_size').val().substring(3);
+            pizza.size = $('#medium_size').val().substring(4);
             $('.size_attribute').text(pizza.size);
             $('#pizza_pic').attr('height', '180', 'width', '180');
             $('.cost_attribute').text(pizza.calculateCost());
