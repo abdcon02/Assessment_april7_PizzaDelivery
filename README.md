@@ -6,7 +6,8 @@ Connor Abdelnoor
 April 17, 2015
 
 ##Description
-This app allows users to select a size and type of pizza and order it to their address.
+This app allows users to select a size and type of pizza, view the cost of their pizza
+and place the order.
 
 ##Use and Editing
 1. Clone this git repository
