@@ -18,3 +18,12 @@ var MakePizza = {
         return cost;
     }
 };
+
+$(function() {
+
+    var pizza = Object.create(MakePizza);
+
+    // $('form#newPizza').submit(function(event) {
+    //     var size
+    // });
+});

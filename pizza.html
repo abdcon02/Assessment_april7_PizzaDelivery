@@ -2,10 +2,50 @@
 <html>
     <head>
         <title>Pizza Order</title>
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/scripts.js"></script>
     </head>
     <body>
-        <p>
-            Hello World!
-        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1>Billy Bob's Pizza</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <h2>Create a Pizza</h2>
+                    <form id="newPizza">
+                    <h3>Pizza Size:</h3>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-danger" id="large_size" value="Large">
+                        <input type="button" class="btn btn-danger" id="medium_size" value="Medium">
+                        <input type="button" class="btn btn-danger" id="small_size" value="Small">
+                    </div>
+                    <h3>Pizza Topping:</h3>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-success" id="plain_topping" value="Plain">
+                        <input type="button" class="btn btn-success" id="cheese_topping" value="Cheese">
+                        <input type="button" class="btn btn-success" id="pepperoni_topping" value="Pepperoni">
+                      </div>
+                    </form>
+                </div>
+
+                <div class="col-xs-6">
+                    <h2>Your Pizza</h2>
+                    <div id="pizza_pic_holder">
+                        <img id="pizza_pic" src="images/plain.png">
+                    </div>
+                    <div id="pizza_attributes">
+                        <h3>Size: <span class="attribute"></span></h3>
+                        <h3>Topping: <span class="attribute"></span></h3>
+                        <h3>Cost: <span class="cost-attribute"></span></h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>

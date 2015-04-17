@@ -1,0 +1,14 @@
+#pizza_pic_holder {
+    border: 1px solid black;
+    margin-top: 3em;
+    height: 230px;
+    width: 230px;
+}
+
+.attribute {
+    color: #33CCFF;
+}
+
+.color_attribute {
+    color: #FF0000;
+}
