@@ -1,4 +1,4 @@
-# Pizza restaurant online order for Epicodus Assessment
+# Pizza restaurant online order for Epicodus Assessment 
 
 ##Developers
 Connor Abdelnoor
